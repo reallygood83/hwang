@@ -1,0 +1,148 @@
+/* 태블릿 디바이스 (768px 이하) */
+@media screen and (max-width: 768px) {
+    /* 헤더 */
+    #main-header {
+        padding: 40px 0;
+    }
+    
+    #main-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    #main-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* 네비게이션 */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: 15px;
+        border-bottom: 1px solid var(--medium-gray);
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        text-align: right;
+    }
+    
+    /* 섹션 콘텐츠 */
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .section:nth-child(even) .section-content {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 타임라인 */
+    .timeline {
+        max-width: 100%;
+    }
+}
+
+/* 모바일 디바이스 (480px 이하) */
+@media screen and (max-width: 480px) {
+    /* 헤더 */
+    #main-header {
+        padding: 30px 0;
+    }
+    
+    #main-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    #main-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    #main-header .author {
+        font-size: 1rem;
+    }
+    
+    /* 섹션 */
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .subsection h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* 키워드 태그 */
+    .keyword {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+    
+    /* 푸터 */
+    footer {
+        padding: 30px 0;
+        font-size: 0.8rem;
+    }
+    
+    /* 버튼 */
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* 이미지 컨테이너 */
+    .image-container {
+        margin-bottom: 20px;
+    }
+    
+    /* 정보 박스 */
+    .info-box {
+        padding: 15px;
+    }
+}
+
+/* 프린트 스타일 */
+@media print {
+    #main-nav, .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .section {
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    .section-image {
+        max-width: 400px;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    footer {
+        background-color: white;
+        color: var(--text-color);
+        border-top: 1px solid #ddd;
+        padding: 20px 0;
+    }
+} 
